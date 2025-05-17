@@ -39,3 +39,19 @@
     });
 
 })(jQuery);
+
+function openModal(imgElement) {
+    var modal = document.getElementById("imageModal");
+    var modalImg = document.getElementById("modalImage");
+    modal.style.display = "flex";
+    modalImg.src = imgElement.src;
+    captionText.innerHTML = imgElement.alt;
+}
+
+window.onload = function() {
+    document.getElementById("imageModal").style.display = "none";
+};
+
+function closeModal() {
+    document.getElementById("imageModal").style.display = "none";
+}
